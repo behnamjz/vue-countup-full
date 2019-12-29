@@ -1,4 +1,26 @@
 {
-"name": "vue-countup-full",
-"version": "1.0.1"
+  "name": "vue-countup-full",
+  "version": "1.0.8",
+  "description": "> It's a vue component that will count to a target number with support english and arabic numbers",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "_resolved": "https://registry.npmjs.org/vue-countup-full/-/vue-countup-full-1.0.8.tgz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behnamjz/vue-countup-full.git"
+  },
+  "keywords": [
+    "vue",
+    "countup",
+    "nuxt",
+    "vue-countup-full"
+  ],
+  "author": "behnam jaberi, shadi farzankia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/behnamjz/vue-countup-full/issues"
+  },
+  "homepage": "https://github.com/behnamjz/vue-countup-full#readme"
 }

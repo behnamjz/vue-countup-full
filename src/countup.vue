@@ -1,35 +1,48 @@
 <template>
-  <div :class="classname" :value="value" :countstep="countstep" :dir="dir"></div>
+  <div class="countup" :value="value" :countstep="countstep" :dir="dir">{{count}}</div>
 </template>
 <script>
 import Vue from 'vue'; 
 export default {
   data() {
-    return {};
+    return {
+      count: null
+    };
   },
   props: {
-    classname: String,
-    countstep: Number,
-    value: Number,
-    dir: String
+    countstep: {
+      type: Number,
+      required: true,
+    },
+    value: {
+      type: Number,
+      required: true,
+    },
+    dir: {
+      type: String,
+      required: false,
+      default: 'ltr',
+    }
+  },
+  created() {
+    this.onReady();
   },
   methods: {
-    onReady(mval) {
-      const countup = document.querySelector("." + mval);
-      const numberdiv = document.querySelectorAll("." + mval)
-      var step = parseInt(countup.getAttribute("countstep"));
-      var value = parseInt(countup.getAttribute("value"));
-      var lang = countup.getAttribute("lang").toLowerCase();
+    onReady() {
+      let self = this;
+      var step = parseInt(self.countstep);
+      var value = parseInt(self.value);
+      var dir = self.dir.toLowerCase();
       let i = 0;
       let interval = setInterval(() => {
         if (i > value - step) {
           clearInterval(interval);
         } else {
           let value = i + step
-          if (lang === 'ltr') {
-             countup.innerHTML = i + step;
-          } else if (lang === 'rtl') {
-            countup.innerHTML = this.arabicNumbers(i + step);
+          if (dir === 'ltr') {
+             this.count = i + step;
+          } else if (dir === 'rtl') {
+            this.count = this.arabicNumbers(i + step);
           }
         }
         i = i + step;
@@ -59,3 +72,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.counup {
+  display: inline-block;
+}
+</style>
