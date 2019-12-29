@@ -1,4 +1,4 @@
-# vue-countUp
+# vue-countup
 
 > It's a vue component that will count to a target number at a specified duration
 
