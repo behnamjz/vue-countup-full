@@ -10,7 +10,7 @@ It is learn from countUp.js;
 
 ### How to use?
 ```bash
-npm install vue-countup
+npm install vue-countup-full
 ```
 
 ### Example
