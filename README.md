@@ -1,6 +1,6 @@
 # vue-countup
 
-> It's a vue component that will count to a target number at a specified duration
+> It's a vue component that will count to a target number with support englisgh and arabic numbers
 
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.
