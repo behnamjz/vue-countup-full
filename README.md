@@ -19,7 +19,7 @@ npm install vue-countup-full
 </template>
 
 <script>
-  import countUp from 'vue-countup';
+  import countUp from 'vue-countup-full';
   export default {
     components: { countUp },
     data () {
